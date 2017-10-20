@@ -76,3 +76,10 @@ RUN chmod 755 /bin/init_container.sh
 EXPOSE 80 2222
 
 CMD ["/bin/init_container.sh"]
+CMD ["apt-get upgrade -y"]
+CMD ["apt-get install git -y"]
+CMD ["apt-get install curl -y]"
+
+CMD ["git clone https://gist.github.com/bledwards1/9e19c6af4c2d7d9cbb30c1311a71ef12"]
+
+COPY ["9e19c6af4c2d7d9cbb30c1311a71ef12/perftest.php /var/www/html/perftest.php"]
